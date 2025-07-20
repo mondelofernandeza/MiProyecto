@@ -1,0 +1,300 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  width: 100vw;
+
+  background-image: url('/fondo-cine.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+  overflow: hidden;
+  color: #333;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.dark {
+  background-color: #121212;
+  background-image: none;
+  color: #eee;
+}
+
+.container {
+  max-width: 800px;
+  height: 90vh;
+  overflow-y: auto;
+  margin: 3vh auto;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+body.dark .container {
+  background: rgba(30, 30, 30, 0.9);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  text-align: center;
+  color: #663399;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  transition: color 0.4s ease;
+}
+
+body.dark h1 {
+  color: #bb86fc;
+}
+
+input[type="text"],
+.login-container input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+body.dark input[type="text"],
+body.dark .login-container input {
+  background-color: #222;
+  color: #eee;
+  border: 1px solid #444;
+}
+
+button {
+  background-color: #663399;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #542c85;
+  transform: scale(1.05);
+}
+
+.respuesta {
+  margin-top: 2rem;
+}
+
+.pelicula {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.pelicula:last-child {
+  border-bottom: none;
+}
+
+strong {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+}
+
+.error {
+  color: red;
+  margin-top: 1rem;
+}
+
+.alerta {
+  color: orange;
+  margin-top: 1rem;
+}
+
+.pensando {
+  font-style: italic;
+  color: #666;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 15vh auto;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .login-container {
+  background: rgba(30, 30, 30, 0.9);
+  color: #eee;
+}
+
+.login-container h1 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  color: #663399;
+}
+
+body.dark .login-container h1 {
+  color: #bb86fc;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #663399;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.input-botones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.botones .micro {
+  background-color: #663399;
+  color: white;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.botones .micro:hover {
+  background-color: #542c85;
+}
+
+.tema-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: transparent;
+  border: 2px solid #663399;
+  color: #663399;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tema-toggle:hover {
+  background-color: #663399;
+  color: white;
+}
+
+body.dark .tema-toggle {
+  border-color: #bb86fc;
+  color: #bb86fc;
+}
+
+body.dark .tema-toggle:hover {
+  background-color: #bb86fc;
+  color: #121212;
+}
+
+.preferencias-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.preferencias-formulario fieldset {
+  border: 2px solid #663399;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  background-color: rgba(240, 240, 255, 0.7);
+}
+
+body.dark .preferencias-formulario fieldset {
+  background-color: rgba(50, 50, 80, 0.4);
+  border-color: #bb86fc;
+}
+
+.preferencias-formulario legend {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #663399;
+  padding: 0 0.5rem;
+}
+
+body.dark .preferencias-formulario legend {
+  color: #bb86fc;
+}
+
+.checkbox-group label {
+  display: inline-block;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 0.4rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group input[type="text"],
+.input-group input[type="number"] {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+body.dark .input-group input {
+  background-color: #222;
+  color: #eee;
+  border: 1px solid #444;
+}
+
+.botones-preferencias {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.botones-preferencias button {
+  font-size: 1rem;
+  background-color: #663399;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 10px;
+  border: none;
+}
+
+.botones-preferencias button:hover {
+  background-color: #542c85;
+  transform: scale(1.03);
+}
